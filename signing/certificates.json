@@ -1,0 +1,14 @@
+{
+  "package": "io.github.localledger.app",
+  "rotation_min_sdk": 33,
+  "legacy_sha256": "1fab5639917a71e5490b0ab426bc182e2d10077503d2bfe44f471b5fafb60341",
+  "release_sha256": "3b7f0b9a5ec91d02c0a75e54a5a575b1673f2e89447745fe2bbeb1e2a0fa7889",
+  "lineage_sha256": "d1a99e04933010bd57477909a01f378bc4c6351e0c0b1db498cf64dbb595ace0",
+  "legacy_capabilities": {
+    "installed_data": true,
+    "shared_uid": false,
+    "permission": true,
+    "rollback": false,
+    "auth": false
+  }
+}

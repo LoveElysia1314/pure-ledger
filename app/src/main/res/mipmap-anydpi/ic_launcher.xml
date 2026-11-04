@@ -1,0 +1,5 @@
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" tools:ignore="MonochromeLauncherIcon">
+    <background android:drawable="@color/brand_ink" />
+    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+    <!-- API 33+ uses the version-qualified file with the monochrome layer. -->
+</adaptive-icon>

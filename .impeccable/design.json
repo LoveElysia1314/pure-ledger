@@ -1,0 +1,723 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-02T03:52:50.975941+00:00",
+  "title": "纯净记账界面设计",
+  "extensions": {
+    "colorMeta": {
+      "primary-light": {
+        "role": "primary",
+        "displayName": "主色 · 浅色",
+        "tonalRamp": [
+          "#001009",
+          "#002C21",
+          "#144D3E",
+          "#2C6E5C",
+          "#51927E",
+          "#7BB2A0",
+          "#AAD6C7",
+          "#D8F7EC"
+        ]
+      },
+      "primary-dark": {
+        "role": "primary",
+        "displayName": "主色 · 深色",
+        "tonalRamp": [
+          "#001008",
+          "#002D1F",
+          "#024F3B",
+          "#1E7058",
+          "#47947A",
+          "#74B49C",
+          "#A5D8C4",
+          "#D5F8EA"
+        ]
+      },
+      "on-primary-light": {
+        "role": "primary",
+        "displayName": "主色文字 · 浅色",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#242424",
+          "#424242",
+          "#606060",
+          "#838383",
+          "#A4A4A4",
+          "#CACACA",
+          "#EEEEEE"
+        ]
+      },
+      "on-primary-dark": {
+        "role": "primary",
+        "displayName": "主色文字 · 深色",
+        "tonalRamp": [
+          "#030E09",
+          "#132920",
+          "#2B4A3D",
+          "#456A5A",
+          "#678D7D",
+          "#8CAD9F",
+          "#B7D2C6",
+          "#E1F4EB"
+        ]
+      },
+      "primary-container-light": {
+        "role": "primary",
+        "displayName": "选中容器 · 浅色",
+        "tonalRamp": [
+          "#070D0A",
+          "#1D2622",
+          "#39463F",
+          "#55655D",
+          "#78887F",
+          "#9AA9A1",
+          "#C2CEC8",
+          "#E8F1EC"
+        ]
+      },
+      "primary-container-dark": {
+        "role": "primary",
+        "displayName": "选中容器 · 深色",
+        "tonalRamp": [
+          "#030E09",
+          "#132920",
+          "#2B4A3D",
+          "#456A59",
+          "#678D7C",
+          "#8CAE9E",
+          "#B7D2C5",
+          "#E1F4EB"
+        ]
+      },
+      "on-primary-container-light": {
+        "role": "primary",
+        "displayName": "选中容器文字 · 浅色",
+        "tonalRamp": [
+          "#010F09",
+          "#0F2A20",
+          "#274B3D",
+          "#406B59",
+          "#628E7C",
+          "#88AF9E",
+          "#B4D3C5",
+          "#DFF5EA"
+        ]
+      },
+      "on-primary-container-dark": {
+        "role": "primary",
+        "displayName": "选中容器文字 · 深色",
+        "tonalRamp": [
+          "#030E09",
+          "#142920",
+          "#2D493D",
+          "#47695A",
+          "#698C7C",
+          "#8EAD9F",
+          "#B8D2C5",
+          "#E1F4EB"
+        ]
+      },
+      "background-light": {
+        "role": "neutral",
+        "displayName": "页面背景 · 浅色",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#232423",
+          "#414341",
+          "#5F615F",
+          "#828482",
+          "#A3A5A3",
+          "#CACBCA",
+          "#EEEFEE"
+        ]
+      },
+      "background-dark": {
+        "role": "neutral",
+        "displayName": "页面背景 · 深色",
+        "tonalRamp": [
+          "#090C0B",
+          "#212523",
+          "#3E4441",
+          "#5B625F",
+          "#7E8581",
+          "#A0A6A3",
+          "#C7CCC9",
+          "#ECEFED"
+        ]
+      },
+      "surface-low-light": {
+        "role": "neutral",
+        "displayName": "低位色面 · 浅色",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#242424",
+          "#424242",
+          "#606060",
+          "#838383",
+          "#A4A4A4",
+          "#CACACA",
+          "#EEEEEE"
+        ]
+      },
+      "surface-low-dark": {
+        "role": "neutral",
+        "displayName": "低位色面 · 深色",
+        "tonalRamp": [
+          "#090C0A",
+          "#202622",
+          "#3D4540",
+          "#59635E",
+          "#7C8680",
+          "#9EA7A2",
+          "#C5CDC8",
+          "#EBF0ED"
+        ]
+      },
+      "surface-container-light": {
+        "role": "neutral",
+        "displayName": "容器色面 · 浅色",
+        "tonalRamp": [
+          "#0A0B0B",
+          "#232523",
+          "#404341",
+          "#5E615F",
+          "#818482",
+          "#A2A5A3",
+          "#C9CBC9",
+          "#EDEFEE"
+        ]
+      },
+      "surface-container-dark": {
+        "role": "neutral",
+        "displayName": "容器色面 · 深色",
+        "tonalRamp": [
+          "#080C0A",
+          "#1F2622",
+          "#3C453F",
+          "#58645C",
+          "#7B877F",
+          "#9DA8A1",
+          "#C4CDC7",
+          "#EAF0EC"
+        ]
+      },
+      "surface-high-light": {
+        "role": "neutral",
+        "displayName": "高位色面 · 浅色",
+        "tonalRamp": [
+          "#0A0C0A",
+          "#222523",
+          "#404341",
+          "#5E625E",
+          "#808481",
+          "#A2A6A3",
+          "#C8CBC9",
+          "#EDEFED"
+        ]
+      },
+      "surface-high-dark": {
+        "role": "neutral",
+        "displayName": "高位色面 · 深色",
+        "tonalRamp": [
+          "#080C0A",
+          "#1F2622",
+          "#3C4540",
+          "#58645D",
+          "#7B8780",
+          "#9DA8A2",
+          "#C4CDC8",
+          "#EAF0ED"
+        ]
+      },
+      "surface-highest-light": {
+        "role": "neutral",
+        "displayName": "最高位色面 · 浅色",
+        "tonalRamp": [
+          "#0A0C0A",
+          "#222523",
+          "#3F4440",
+          "#5C625E",
+          "#7F8581",
+          "#A1A6A2",
+          "#C7CCC9",
+          "#ECEFED"
+        ]
+      },
+      "surface-highest-dark": {
+        "role": "neutral",
+        "displayName": "最高位色面 · 深色",
+        "tonalRamp": [
+          "#080C0A",
+          "#1E2621",
+          "#3B453F",
+          "#57645C",
+          "#79877E",
+          "#9CA8A0",
+          "#C3CDC7",
+          "#E9F1EC"
+        ]
+      },
+      "text-light": {
+        "role": "neutral",
+        "displayName": "正文 · 浅色",
+        "tonalRamp": [
+          "#080C0A",
+          "#1F2622",
+          "#3C4540",
+          "#59635E",
+          "#7B8680",
+          "#9DA7A2",
+          "#C4CDC8",
+          "#EAF0ED"
+        ]
+      },
+      "text-dark": {
+        "role": "neutral",
+        "displayName": "正文 · 深色",
+        "tonalRamp": [
+          "#0A0C0B",
+          "#222523",
+          "#3F4441",
+          "#5C625F",
+          "#7F8581",
+          "#A1A6A3",
+          "#C7CCC9",
+          "#ECEFED"
+        ]
+      },
+      "text-secondary-light": {
+        "role": "neutral",
+        "displayName": "辅助文字 · 浅色",
+        "tonalRamp": [
+          "#070D0A",
+          "#1D2621",
+          "#39463F",
+          "#56655C",
+          "#78887F",
+          "#9AA9A0",
+          "#C2CEC7",
+          "#E9F1EC"
+        ]
+      },
+      "text-secondary-dark": {
+        "role": "neutral",
+        "displayName": "辅助文字 · 深色",
+        "tonalRamp": [
+          "#080C0A",
+          "#1E2621",
+          "#3B453F",
+          "#57645C",
+          "#79877F",
+          "#9CA8A0",
+          "#C3CEC7",
+          "#E9F1EC"
+        ]
+      },
+      "outline-light": {
+        "role": "neutral",
+        "displayName": "功能轮廓 · 浅色",
+        "tonalRamp": [
+          "#080C0A",
+          "#1E2622",
+          "#3A4540",
+          "#57645D",
+          "#798780",
+          "#9BA8A1",
+          "#C3CDC8",
+          "#E9F1EC"
+        ]
+      },
+      "outline-dark": {
+        "role": "neutral",
+        "displayName": "功能轮廓 · 深色",
+        "tonalRamp": [
+          "#070D09",
+          "#1C2721",
+          "#38463E",
+          "#54655B",
+          "#76887D",
+          "#99A99F",
+          "#C1CEC6",
+          "#E8F1EB"
+        ]
+      },
+      "outline-variant-light": {
+        "role": "neutral",
+        "displayName": "弱分隔 · 浅色",
+        "tonalRamp": [
+          "#090C0A",
+          "#212522",
+          "#3E4440",
+          "#5B635D",
+          "#7E857F",
+          "#A0A7A1",
+          "#C6CCC8",
+          "#ECF0EC"
+        ]
+      },
+      "outline-variant-dark": {
+        "role": "neutral",
+        "displayName": "弱分隔 · 深色",
+        "tonalRamp": [
+          "#070D09",
+          "#1D2721",
+          "#39463E",
+          "#55655B",
+          "#77887D",
+          "#9AA99F",
+          "#C2CEC6",
+          "#E8F1EB"
+        ]
+      },
+      "tertiary-light": {
+        "role": "tertiary",
+        "displayName": "辅助蓝灰 · 浅色",
+        "tonalRamp": [
+          "#050D0F",
+          "#19262A",
+          "#33464B",
+          "#4E656B",
+          "#70888F",
+          "#94A9AF",
+          "#BDCED3",
+          "#E5F1F5"
+        ]
+      },
+      "tertiary-dark": {
+        "role": "tertiary",
+        "displayName": "辅助蓝灰 · 深色",
+        "tonalRamp": [
+          "#050D0F",
+          "#17272B",
+          "#31464C",
+          "#4C656C",
+          "#6E888F",
+          "#92A9B0",
+          "#BBCED4",
+          "#E4F1F5"
+        ]
+      },
+      "expense-light": {
+        "role": "secondary",
+        "displayName": "支出 · 浅色",
+        "tonalRamp": [
+          "#1E0100",
+          "#440F08",
+          "#6F281E",
+          "#994134",
+          "#C06556",
+          "#DE8B7D",
+          "#FCB7AA",
+          "#FFE1D8"
+        ]
+      },
+      "expense-dark": {
+        "role": "secondary",
+        "displayName": "支出 · 深色",
+        "tonalRamp": [
+          "#190402",
+          "#3C1811",
+          "#643229",
+          "#8A4D41",
+          "#B07063",
+          "#CF9488",
+          "#EFBDB3",
+          "#FFE5DE"
+        ]
+      },
+      "income-light": {
+        "role": "primary",
+        "displayName": "收入 · 浅色",
+        "tonalRamp": [
+          "#001009",
+          "#002C21",
+          "#144D3E",
+          "#2C6E5C",
+          "#51927E",
+          "#7BB2A0",
+          "#AAD6C7",
+          "#D8F7EC"
+        ]
+      },
+      "income-dark": {
+        "role": "primary",
+        "displayName": "收入 · 深色",
+        "tonalRamp": [
+          "#001008",
+          "#002D1F",
+          "#024F3B",
+          "#1E7058",
+          "#47947A",
+          "#74B49C",
+          "#A5D8C4",
+          "#D5F8EA"
+        ]
+      },
+      "transfer-light": {
+        "role": "tertiary",
+        "displayName": "转账 · 浅色",
+        "tonalRamp": [
+          "#000D16",
+          "#092737",
+          "#20475C",
+          "#376781",
+          "#5A8AA5",
+          "#82ABC4",
+          "#AED0E4",
+          "#DBF3FF"
+        ]
+      },
+      "transfer-dark": {
+        "role": "tertiary",
+        "displayName": "转账 · 深色",
+        "tonalRamp": [
+          "#030D13",
+          "#142731",
+          "#2D4654",
+          "#466576",
+          "#68889B",
+          "#8DA9BA",
+          "#B7CFDC",
+          "#E1F1FB"
+        ]
+      },
+      "brand-ink": {
+        "role": "primary",
+        "displayName": "品牌墨绿",
+        "tonalRamp": [
+          "#000F0A",
+          "#0B2A22",
+          "#234B3F",
+          "#3B6B5D",
+          "#5E8F7F",
+          "#85AFA1",
+          "#B1D4C7",
+          "#DDF5EC"
+        ]
+      },
+      "brand-paper": {
+        "role": "neutral",
+        "displayName": "品牌纸色",
+        "tonalRamp": [
+          "#0C0B08",
+          "#26241F",
+          "#45423B",
+          "#646057",
+          "#878379",
+          "#A8A49C",
+          "#CDCAC3",
+          "#F0EEE9"
+        ]
+      },
+      "brand-fold": {
+        "role": "primary",
+        "displayName": "品牌折角",
+        "tonalRamp": [
+          "#050E06",
+          "#18291B",
+          "#334937",
+          "#4D6852",
+          "#6F8C74",
+          "#93AC97",
+          "#BCD1BF",
+          "#E4F3E6"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline-large": {
+        "displayName": "headline-large",
+        "purpose": "详情及编辑中的重点金额。"
+      },
+      "headline-small": {
+        "displayName": "headline-small",
+        "purpose": "详情中的主要金额或重点标题。"
+      },
+      "title-large": {
+        "displayName": "title-large",
+        "purpose": "页面标题与数字键盘。"
+      },
+      "title-medium": {
+        "displayName": "title-medium",
+        "purpose": "悬浮标题、较大金额和次级标题。"
+      },
+      "title-small": {
+        "displayName": "title-small",
+        "purpose": "账目金额、选择器及统计主标签。"
+      },
+      "body-large": {
+        "displayName": "body-large",
+        "purpose": "账单标题、备注和主要阅读内容。"
+      },
+      "body-medium": {
+        "displayName": "body-medium",
+        "purpose": "设置值与汇总标签。"
+      },
+      "body-small": {
+        "displayName": "body-small",
+        "purpose": "交易背景与错误提示。"
+      },
+      "label-large": {
+        "displayName": "label-large",
+        "purpose": "短操作标签和局部选择。"
+      },
+      "label-medium": {
+        "displayName": "label-medium",
+        "purpose": "日期、字段标签和状态。"
+      },
+      "label-small": {
+        "displayName": "label-small",
+        "purpose": "数量、占比及次要说明。"
+      },
+      "entry-amount": {
+        "displayName": "entry-amount",
+        "purpose": "录入金额；保留系统字号，不缩小或省略。"
+      }
+    },
+    "shadows": [
+      {
+        "name": "candidate-panel",
+        "value": "8dp",
+        "purpose": "原生 Surface.shadowElevation；候选悬浮窗。"
+      },
+      {
+        "name": "form-actions",
+        "value": "2dp",
+        "purpose": "原生 Surface.shadowElevation；表单底部操作区。"
+      }
+    ],
+    "motion": [],
+    "breakpoints": [
+      {
+        "name": "phone-portrait-smallest-width-boundary",
+        "value": "600dp"
+      },
+      {
+        "name": "navigation-rail-min-width",
+        "value": "600dp"
+      },
+      {
+        "name": "entry-two-columns-min-width",
+        "value": "600dp"
+      },
+      {
+        "name": "toolbar-one-row-min-width",
+        "value": "760dp"
+      },
+      {
+        "name": "bills-single-pane-height-boundary",
+        "value": "480dp"
+      },
+      {
+        "name": "composition-side-by-side-min-width",
+        "value": "720dp"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "保存按钮",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "原生实色动作按钮的浅色 token 预览；实际高度和输入状态由 Compose 决定。",
+      "html": "<button class=\"ds-save\">保存</button>",
+      "css": ".ds-save{min-height:48px;padding:0 24px;border:0;border-radius:12px;background:#1D6754;color:#FFFFFF;font:500 14px/20px sans-serif;font-variant-numeric:tabular-nums;cursor:pointer}.ds-save:hover{filter:brightness(.96)}.ds-save:focus-visible{outline:2px solid #1D6754;outline-offset:3px}.ds-save:active{filter:brightness(.9)}.ds-save:disabled{background:#19231E1F;color:#506057;cursor:default}"
+    },
+    {
+      "name": "取消按钮",
+      "kind": "button",
+      "refersTo": "button-text",
+      "description": "文字动作的浅色 token 预览，保留完整触控高度。",
+      "html": "<button class=\"ds-cancel\">取消</button>",
+      "css": ".ds-cancel{min-height:48px;padding:0 12px;border:0;border-radius:12px;background:transparent;color:#1D6754;font:500 14px/20px sans-serif;cursor:pointer}.ds-cancel:hover{background:#1D67540A}.ds-cancel:focus-visible{outline:2px solid #1D6754;outline-offset:2px}.ds-cancel:active{background:#1D675414}.ds-cancel:disabled{color:#19231E61;cursor:default}"
+    },
+    {
+      "name": "账本选择器",
+      "kind": "button",
+      "refersTo": "book-menu",
+      "description": "BookMenuButton 的内容宽度、色面和展开提示预览；完整账本名由原生状态语义提供。",
+      "html": "<button class=\"ds-book\" aria-label=\"选择账本：日常账本\"><span>日常账本</span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg></button>",
+      "css": ".ds-book{display:inline-flex;align-items:center;gap:8px;max-width:100%;min-height:48px;padding:0 12px;border:0;border-radius:12px;background:#EDF1EE;color:#19231E;font:500 15px/22px sans-serif;cursor:pointer}.ds-book span{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.ds-book svg{width:16px;height:16px;flex-shrink:0}.ds-book:hover{filter:brightness(.98)}.ds-book:focus-visible{outline:2px solid #718078;outline-offset:2px}.ds-book:active{filter:brightness(.94)}"
+    },
+    {
+      "name": "期间选择器",
+      "kind": "button",
+      "refersTo": "period-selector",
+      "description": "SelectorButton 期间版本的两行容量与高位色面预览；原生目标高度为 48dp。",
+      "html": "<button class=\"ds-period\" aria-label=\"选择期间：2026年11月\"><span>2026年11月</span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg></button>",
+      "css": ".ds-period{display:flex;align-items:center;gap:8px;width:240px;min-height:48px;padding:4px 12px;box-sizing:border-box;border:0;border-radius:12px;background:#E8EDE9;color:#19231E;font:500 15px/20px sans-serif;font-variant-numeric:tabular-nums;cursor:pointer}.ds-period span{flex:1;text-align:left;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.ds-period svg{width:16px;height:16px;flex-shrink:0}.ds-period:hover{filter:brightness(.98)}.ds-period:focus-visible{outline:2px solid #718078;outline-offset:2px}.ds-period:active{filter:brightness(.94)}"
+    },
+    {
+      "name": "目录页签",
+      "kind": "nav",
+      "refersTo": "ledger-tabs",
+      "description": "LedgerTabs 用于目录分组，当前项使用底部指示线。",
+      "html": "<nav class=\"ds-tabs\" role=\"tablist\" aria-label=\"目录分组\"><button role=\"tab\" aria-selected=\"true\">启用</button><button role=\"tab\" aria-selected=\"false\">隐藏</button></nav>",
+      "css": ".ds-tabs{display:flex;width:320px;max-width:100%}.ds-tabs button{position:relative;flex:1;min-height:50px;padding:10px 8px 12px;border:0;background:transparent;color:#506057;font:500 15px/22px sans-serif;cursor:pointer}.ds-tabs button[aria-selected=\"true\"]{font-weight:600;color:#1D6754}.ds-tabs button[aria-selected=\"true\"]:after{content:\"\";position:absolute;bottom:0;left:27.5%;width:45%;height:2px;background:#1D6754;border-radius:8px}.ds-tabs button:hover{background:#1D67540A}.ds-tabs button:focus-visible{outline:2px solid #1D6754;outline-offset:-2px}.ds-tabs button:active{background:#1D675414}"
+    },
+    {
+      "name": "统计分析切换",
+      "kind": "nav",
+      "refersTo": "statistics-segment-selected",
+      "description": "StatisticsControls 的分段轨道；可见选中色面高 32dp，触控范围至少 48dp。",
+      "html": "<div class=\"ds-stats\" role=\"tablist\" aria-label=\"统计分析\"><button role=\"tab\" aria-selected=\"true\">分类占比</button><button role=\"tab\" aria-selected=\"false\">收支变化</button></div>",
+      "css": ".ds-stats{display:flex;gap:0;background:linear-gradient(transparent 6px,#EDF1EE 6px,#EDF1EE calc(100% - 6px),transparent calc(100% - 6px));border-radius:10px}.ds-stats button{min-height:48px;padding:12px 10px;border:0;border-radius:8px;background:transparent;color:#506057;font:500 14px/20px sans-serif;cursor:pointer}.ds-stats button[aria-selected=\"true\"]{background:#DCEFE5;background-clip:padding-box;border:8px solid transparent;padding:4px 2px;color:#174736}.ds-stats button:hover{color:#1D6754}.ds-stats button:focus-visible{outline:2px solid #1D6754;outline-offset:0}"
+    },
+    {
+      "name": "图表与列表切换",
+      "kind": "nav",
+      "refersTo": "view-switch-selected",
+      "description": "StatisticsDisplaySwitch 与分析维度共用分段样式，两种分析共用展示偏好，每项保留 48dp 触控范围。",
+      "html": "<div class=\"ds-view\" role=\"tablist\" aria-label=\"统计视图\"><button role=\"tab\" aria-label=\"图表\" aria-selected=\"true\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M12 3v9h9A9 9 0 1 1 12 3Z\"/><path d=\"M15 3.5A9 9 0 0 1 20.5 9H15Z\"/></svg></button><button role=\"tab\" aria-label=\"列表\" aria-selected=\"false\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01\"/></svg></button></div>",
+      "css": ".ds-view{display:flex;width:96px;background:#EDF1EE;border-radius:10px}.ds-view button{display:grid;place-items:center;width:48px;height:48px;padding:0;border:0;border-radius:10px;background:transparent;color:#506057;cursor:pointer}.ds-view button[aria-selected=\"true\"]{background:#DCEFE5;background-clip:padding-box;border:8px solid transparent;color:#174736}.ds-view svg{width:20px;height:20px}.ds-view button:hover{background:#EDF1EE}.ds-view button[aria-selected=\"true\"]:hover{background:#E8EDE9}.ds-view button:focus-visible{outline:2px solid #1D6754;outline-offset:-2px}.ds-view button:active{filter:brightness(.94)}"
+    },
+    {
+      "name": "录入标签",
+      "kind": "chip",
+      "refersTo": "entry-tag",
+      "description": "EntryTags 与 EntryOption 的换行结构预览；长名称视觉最多两行，原生状态描述保留完整值。信息区优先容纳常见两行标签，溢出时由原生 EntryInformation 提供持久滚动提示。",
+      "html": "<div class=\"ds-tags\"><button class=\"ds-tag\" aria-label=\"账本：日常家庭与旅行账本\"><span class=\"ds-tag-face\"><span class=\"ds-tag-label\">日常家庭与旅行账本</span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button><button class=\"ds-tag\" aria-label=\"账户：现金\"><span class=\"ds-tag-face\"><span class=\"ds-tag-label\">现金</span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></div>",
+      "css": ".ds-tags{display:flex;flex-wrap:wrap;gap:0 4px;max-width:320px}.ds-tag{min-height:48px;padding:6px 4px;border:0;background:transparent;cursor:pointer}.ds-tag-face{display:flex;align-items:center;gap:4px;max-width:280px;padding:6px 10px;box-sizing:border-box;border-radius:10px;background:#FFFFFF;color:#19231E;font:500 14px/20px sans-serif}.ds-tag-label{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-align:left}.ds-tag svg{width:12px;height:12px;flex-shrink:0}.ds-tag:hover .ds-tag-face{background:#EDF1EE}.ds-tag:focus-visible{outline:2px solid #1D6754;outline-offset:0;border-radius:10px}.ds-tag:active .ds-tag-face{background:#E8EDE9}"
+    },
+    {
+      "name": "备注输入",
+      "kind": "input",
+      "refersTo": "entry-note",
+      "description": "EntryNoteField 的容器与焦点轮廓预览；系统输入法、字号和原生选择行为由 Compose 提供。",
+      "html": "<textarea class=\"ds-note\" rows=\"2\" aria-label=\"备注\" placeholder=\"备注\"></textarea>",
+      "css": ".ds-note{display:block;width:300px;max-width:100%;min-height:48px;padding:10px;box-sizing:border-box;border:2px solid transparent;border-radius:12px;background:#EDF1EE;color:#19231E;font:400 15px/23px sans-serif;font-variant-numeric:tabular-nums;caret-color:#1D6754;resize:vertical}.ds-note::placeholder{color:#506057;opacity:1}.ds-note:hover{background:#E8EDE9}.ds-note:focus-visible{border-color:#1D6754;outline:0;background:#EDF1EE}.ds-note:active{caret-color:#1D6754}"
+    },
+    {
+      "name": "候选确认面板",
+      "kind": "card",
+      "refersTo": "candidate-panel",
+      "description": "CandidatePanel 的默认展开结构、边界与动作层级预览；CSS 阴影为示意，72%／80% 高度与键盘行为须在 Android 原生环境复核。",
+      "html": "<section class=\"ds-panel\" aria-label=\"确认账单\"><header><strong>纯净记账</strong><button class=\"ds-panel-text\">收起</button></header><div class=\"ds-panel-content\"><div class=\"ds-panel-amount\"><span>金额（元）</span><strong>128.00</strong></div><p>晚餐</p><div class=\"ds-panel-categories\"><button aria-pressed=\"true\">餐饮 ✓</button><button aria-pressed=\"false\">购物</button><button aria-pressed=\"false\">交通</button></div></div><footer><button class=\"ds-panel-text\">取消</button><button class=\"ds-panel-save\">保存</button></footer></section>",
+      "css": ".ds-panel{width:340px;max-width:100%;max-height:72vh;overflow:auto;box-sizing:border-box;border:1px solid #718078A6;border-radius:24px 24px 16px 16px;background:#FFFFFF;color:#19231E;box-shadow:0 4px 8px #0003;font:400 15px/23px sans-serif;font-variant-numeric:tabular-nums}.ds-panel header,.ds-panel footer{display:flex;align-items:center;gap:8px;padding:0 12px}.ds-panel header{border-bottom:.5px solid #D5DED7}.ds-panel header strong{flex:1;font:500 17px/24px sans-serif}.ds-panel button{min-height:48px;border:0;border-radius:12px;font:500 14px/20px sans-serif;cursor:pointer}.ds-panel-text{padding:0 12px;background:transparent;color:#1D6754}.ds-panel-content{padding:8px 12px}.ds-panel-amount{display:flex;align-items:baseline;gap:12px}.ds-panel-amount span{font:500 12px/18px sans-serif;color:#506057}.ds-panel-amount strong{flex:1;text-align:right;font:600 24px/30px sans-serif}.ds-panel p{margin:8px 0;padding:10px;border-radius:12px;background:#EDF1EE}.ds-panel-categories{display:flex;flex-wrap:wrap;gap:4px}.ds-panel-categories button{padding:0 12px;background:transparent;color:#506057}.ds-panel-categories button[aria-pressed=\"true\"]{background:#DCEFE5;color:#174736}.ds-panel footer{padding-bottom:4px}.ds-panel footer .ds-panel-text{flex:1}.ds-panel-save{flex:2;padding:0 20px;background:#1D6754;color:#FFFFFF}.ds-panel button:hover{filter:brightness(.96)}.ds-panel button:focus-visible{outline:2px solid #1D6754;outline-offset:2px}.ds-panel button:active{filter:brightness(.9)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "账目可读，操作可达",
+    "overview": "界面围绕查看账目、核对金额和完成录入组织。主标题优先显示备注，备注为空时显示交易对象；金额与标题构成第一层信息，时间、账户和分类说明交易背景。分类图标帮助定位，日期分组与期间汇总支持连续浏览。\n\n原生 Compose 控件沿用 Android 的选择、输入、返回和无障碍语义。色面、间距和对齐划分内容层级，主要操作使用主色；账务含义由文字、符号和独立语义色共同表达。",
+    "keyCharacteristics": [
+      "备注优先，金额完整，辅助信息可连续浏览。",
+      "色面形成层级，功能边界与组内分隔强度不同。",
+      "操作目标至少 48dp，阅读内容随系统字号调整。",
+      "手机竖向操作，宽窗口保留列表与详情之间的连续关系。"
+    ],
+    "rules": [],
+    "dos": [
+      "**Do** 完整显示金额，按宽度换行或调整行列，并保留系统字号。",
+      "**Do** 让备注、交易对象、账户和余额策略各自表达真实字段含义。",
+      "**Do** 为图标和短标签保留至少 48dp 触控目标及明确的辅助状态。",
+      "**Do** 用色面层级组织内容，用功能轮廓与弱分隔表达不同边界。",
+      "**Do** 在手机、大字体、英文和宽窗口中复核同一流程的可达性。"
+    ],
+    "donts": [
+      "**Don't** 为固定三列、单行或紧凑外观缩小或省略金额。",
+      "**Don't** 将支出套用错误色，或仅靠颜色区分账务类型与状态。",
+      "**Don't** 默认收起候选或分类，增加确认账目前的额外展开步骤。",
+      "**Don't** 用小于 48dp 的点击区换取视觉密度。",
+      "**Don't** 在产品中加入开发答复、验收结论、无关保证或重复版本标签。"
+    ]
+  }
+}

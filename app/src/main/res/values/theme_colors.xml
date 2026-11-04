@@ -1,0 +1,7 @@
+<resources>
+    <!-- Platform windows and pickers mirror the Compose roles; ContrastTest verifies parity. -->
+    <color name="ledger_primary_light">#1D6754</color>
+    <color name="ledger_primary_dark">#83D6B8</color>
+    <color name="ledger_background_light">#F5F7F5</color>
+    <color name="ledger_background_dark">#101613</color>
+</resources>

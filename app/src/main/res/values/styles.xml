@@ -1,0 +1,26 @@
+<resources>
+    <style name="LedgerOverlay.Animation" parent="">
+        <item name="android:windowEnterAnimation">@anim/ledger_overlay_enter</item>
+    </style>
+    <style name="Theme.LocalLedger" parent="Theme.LocalLedger.Light" />
+    <style name="Theme.LocalLedger.Light" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowBackground">@color/ledger_background_light</item>
+        <item name="android:colorAccent">@color/ledger_primary_light</item>
+    </style>
+    <style name="Theme.LocalLedger.Dark" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowBackground">@color/ledger_background_dark</item>
+        <item name="android:colorAccent">@color/ledger_primary_dark</item>
+    </style>
+    <style name="LedgerDialog.Light" parent="android:style/Theme.Material.Light.Dialog.Alert">
+        <item name="android:colorAccent">@color/ledger_primary_light</item>
+    </style>
+    <style name="LedgerDialog.Dark" parent="android:style/Theme.Material.Dialog.Alert">
+        <item name="android:colorAccent">@color/ledger_primary_dark</item>
+    </style>
+</resources>
