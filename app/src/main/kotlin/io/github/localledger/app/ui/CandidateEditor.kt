@@ -23,7 +23,8 @@ fun CandidateEditor(pending: PendingCandidate, onSave: (ConfirmedEntry) -> Unit,
     if (preparation == null) {
         Column(Modifier.padding(24.dp)) {
             if (pending.error == null) CircularProgressIndicator() else {
-                Text(localizedMessage(pending.error)); TextButton(onRetry) { Text(appString(R.string.ui_retry)) }
+                Text(localizedMessage(pending.error), color = MaterialTheme.colorScheme.error)
+                TextButton(onRetry) { Text(appString(R.string.ui_retry)) }
             }
         }
         return
@@ -38,4 +39,11 @@ fun CandidateEditor(pending: PendingCandidate, onSave: (ConfirmedEntry) -> Unit,
                     draft.bookId, draft.accountId, draft.categoryId, draft.occurredAtMs, draft.affectsBalance))
             } catch (e: IllegalArgumentException) { throw e }
         }, onCancel = onCancel)
+}
+
+/** Repeated entries require attention in every presentation of the confirmation form. */
+@Composable
+internal fun DuplicateBadge(text: String = appString(R.string.ui_duplicate), modifier: Modifier = Modifier) {
+    Text(text, modifier, color = MaterialTheme.colorScheme.error,
+        style = MaterialTheme.typography.labelLarge)
 }

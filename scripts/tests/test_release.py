@@ -35,6 +35,20 @@ class SignerSelectionTest(unittest.TestCase):
 
 
 class PublicVersionResetTest(unittest.TestCase):
+    def test_replacement_revision_preserves_upgrade_order(self):
+        original = validate_version_properties(dict(versionName='0.1.1', versionCode='60500', versionCodeBase='50400'))
+        replacement = validate_version_properties(dict(versionName='0.1.1', versionCode='60501', versionCodeBase='50400', versionRevision='1'))
+        last_revision = validate_version_properties(dict(versionName='0.1.1', versionCode='60599', versionCodeBase='50400', versionRevision='99'))
+        following = validate_version_properties(dict(versionName='0.1.2', versionCode='60600', versionCodeBase='50400'))
+        self.assertLess(original, replacement)
+        self.assertLess(replacement, last_revision)
+        self.assertLess(last_revision, following)
+
+    def test_revision_cannot_overlap_a_different_public_patch(self):
+        for revision, code in [('-1', '60499'), ('100', '60600'), ('1', '60500')]:
+            with self.assertRaises(ValueError):
+                validate_version_properties(dict(versionName='0.1.1', versionCode=code, versionCodeBase='50400', versionRevision=revision))
+
     def test_public_first_release_still_upgrades_private_development_builds(self):
         first = validate_version_properties(dict(versionName='0.1.0', versionCode='60400', versionCodeBase='50400'))
         following = validate_version_properties(dict(versionName='0.1.1', versionCode='60500', versionCodeBase='50400'))

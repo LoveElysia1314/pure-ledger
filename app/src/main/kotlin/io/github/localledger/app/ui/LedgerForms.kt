@@ -209,7 +209,7 @@ internal fun EntryForm(initial: EntryDraft, formKey: String, catalog: LedgerCata
                 } else FilterChip(type == choice, { if (type != choice) switchSelection(book, choice) },
                     label = { Text(typeTitle(choice)) }, enabled = !saving, modifier = Modifier.heightIn(min = 48.dp))
             }
-            if (status != null) Text(status, color = MaterialTheme.colorScheme.tertiary, style = MaterialTheme.typography.labelLarge)
+            if (status != null) DuplicateBadge(status)
         }
         }
         types()

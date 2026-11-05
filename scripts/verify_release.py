@@ -30,10 +30,12 @@ def main():
         (out/(name+'.log')).write_text(result.stdout+result.stderr,encoding='utf-8')
         assert result.returncode==0,name
         return result.stdout+result.stderr
-    properties=dict(re.findall(r'^(versionName|versionCode|versionCodeBase)=(.+)$',(ROOT/'gradle.properties').read_text(),re.M))
+    properties=dict(re.findall(r'^(versionName|versionCode|versionCodeBase|versionRevision)=(.+)$',(ROOT/'gradle.properties').read_text(),re.M))
     version=properties['versionName'];code=int(properties['versionCode'])
     major,minor,patch=map(int,version.split('.'));assert 0<=minor<100 and 0<=patch<100
-    assert code==int(properties.get('versionCodeBase','0'))+major*1_000_000+minor*10_000+patch*100
+    revision=int(properties.get('versionRevision','0'))
+    assert 0<=revision<100
+    assert code==int(properties.get('versionCodeBase','0'))+major*1_000_000+minor*10_000+patch*100+revision
     badging=run([sdk/('aapt2'+executable),'dump','badging',apk],'apk-metadata')
     assert f"package: name='io.github.localledger.app' versionCode='{code}' versionName='{version}'" in badging
     permissions=run([sdk/('aapt2'+executable),'dump','permissions',apk],'apk-permissions')

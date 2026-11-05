@@ -51,7 +51,8 @@ def validate_version_properties(properties):
     major, minor, patch = map(int, match.groups())
     base = int(properties.get('versionCodeBase', '0'))
     code = int(properties['versionCode'])
-    if base < 0 or code != base + major * 1_000_000 + minor * 10_000 + patch * 100 or not 0 < code <= 2_100_000_000:
+    revision = int(properties.get('versionRevision', '0'))
+    if base < 0 or not 0 <= revision < 100 or code != base + major * 1_000_000 + minor * 10_000 + patch * 100 + revision or not 0 < code <= 2_100_000_000:
         raise ValueError('Version code does not match the fixed installation-code base')
     return code
 
@@ -268,7 +269,7 @@ class ReleaseTools:
 
     def build(self, output: Path | None):
         self.validate_material()  # Missing/mismatched keys stop before a build; no debug-signing fallback.
-        props = dict(re.findall(r'^(versionName|versionCode|versionCodeBase)=(.+)$', (ROOT / 'gradle.properties').read_text(), re.M))
+        props = dict(re.findall(r'^(versionName|versionCode|versionCodeBase|versionRevision)=(.+)$', (ROOT / 'gradle.properties').read_text(), re.M))
         validate_version_properties(props)
         version = props['versionName']
         if not re.fullmatch(r'\d+\.\d+\.\d+', version):

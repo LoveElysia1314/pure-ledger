@@ -47,7 +47,7 @@ class ContrastTest {
             check("selected", c.onPrimaryContainer, c.primaryContainer)
             check("selected-secondary", c.onSecondaryContainer, c.secondaryContainer)
             check("action", c.primary, c.surfaceContainerLow)
-            check("repeat", c.tertiary, c.surfaceContainerLow)
+            check("repeat", c.error, c.surfaceContainerLow)
             check("error", c.error, c.surfaceContainerLow)
             check("summary-label", c.onSurfaceVariant, c.primaryContainer)
             NoticeKind.entries.forEach { kind -> feedbackColors(kind,dark).let { check("feedback-$kind",it.content,it.container) } }

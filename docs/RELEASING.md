@@ -5,10 +5,12 @@
 `gradle.properties` 中的 `versionName` 是公开版本，首发为 0.1.0；`versionCode` 是 Android 安装构建号，首发为 60400。两者用途不同。为兼容已有开发安装，固定 `versionCodeBase=50400`：
 
 ```text
-versionCode = 50400 + major × 1,000,000 + minor × 10,000 + patch × 100
+versionCode = 50400 + major × 1,000,000 + minor × 10,000 + patch × 100 + versionRevision
 ```
 
-minor、patch 取 0–99。后续 0.1.1 使用 60500，0.2.0 使用 70400；不要重设偏移量或降低构建号。应用内更新检测比较公开版本，数据库和 ZIP 使用各自的格式版本。
+minor、patch、versionRevision 取 0–99，versionRevision 默认为 0。0.1.1 的初始构建号为 60500，当前同版本替换使用 revision=1、构建号 60501；后续 0.1.2 从 60600 开始，0.2.0 从 70400 开始。不要重设偏移量或降低构建号。应用内更新检测比较公开版本，数据库和 ZIP 使用各自的格式版本。
+
+通常应递增公开版本。同版本覆盖必须有明确授权，并先备份远程引用、提交、发行说明和全部附件；新 APK 仍需递增安装构建号。替换后，已安装同名旧包的设备需手动下载覆盖，常规自动更新不会提示这次替换。
 
 包名、签名与数据升级规则见 [SIGNING.md](SIGNING.md)。公开仓库初始化提交不会改变手机安装身份或签名材料。
 

@@ -62,6 +62,7 @@ internal fun CandidatePanel(candidate: PendingCandidate, catalog: LedgerCatalog,
           } else Row(Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 8.dp), verticalAlignment = Alignment.CenterVertically,
               horizontalArrangement = Arrangement.spacedBy(4.dp)) {
             Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                if (candidate.preparation?.repeated == true) DuplicateBadge()
                 if (LocalDensity.current.fontScale > 1.3f) Text(appString(R.string.app_name), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 Text(if (summaryAmount.isBlank()) appString(R.string.ui_no_amount_entered) else "${if (summaryType == TransactionType.INCOME.name) "+" else "−"} ¥ $summaryAmount", style = MaterialTheme.typography.titleMedium)
                 val caption = if (LocalDensity.current.fontScale > 1.3f) summaryMerchant else listOf(appString(R.string.app_name), summaryMerchant).filter(String::isNotBlank).joinToString(" · ")

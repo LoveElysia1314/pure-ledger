@@ -37,7 +37,8 @@ internal fun AutomaticControls(graph: LedgerGraph, ready: Boolean, onEnable: (Bo
     HorizontalDivider(Modifier.padding(horizontal = 16.dp))
     Row(Modifier.fillMaxWidth().heightIn(min = 56.dp).padding(horizontal = 16.dp), verticalAlignment = Alignment.CenterVertically) {
         Text(appString(R.string.ui_status_notification), Modifier.weight(1f), style = MaterialTheme.typography.bodyLarge)
-        if (notify && !permissions.notifications) TextButton(onNotificationSettings, Modifier.heightIn(min = 48.dp)) { Text(appString(R.string.ui_not_allowed)) }
+        if (notify && !permissions.notifications) TextButton(onNotificationSettings, Modifier.heightIn(min = 48.dp),
+            colors = ButtonDefaults.textButtonColors(contentColor = MaterialTheme.colorScheme.error)) { Text(appString(R.string.ui_not_allowed)) }
         Switch(notify, onNotifications, Modifier.semantics { contentDescription = appString(R.string.ui_status_notification) })
     }
     Row(Modifier.fillMaxWidth().heightIn(min = 56.dp).toggleable(feedback, role = Role.Switch, onValueChange = graph::setSuccessFeedback)

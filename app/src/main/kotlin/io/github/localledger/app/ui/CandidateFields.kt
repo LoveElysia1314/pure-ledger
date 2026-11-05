@@ -72,13 +72,13 @@ internal fun CandidateFields(value: EntryPageValues, catalog: LedgerCatalog, sav
                         if (type == value.type) HorizontalDivider(Modifier.width(24.dp), thickness = 2.dp, color = MaterialTheme.colorScheme.primary)
                     }
                 }
-                if (status != null && !(large && status.length > 3)) Text(status, Modifier.padding(start = 8.dp), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.tertiary)
+                if (status != null && !(large && status.length > 3)) DuplicateBadge(status, Modifier.padding(start = 8.dp))
                 Spacer(Modifier.weight(1f))
                 IconButton({ focus.clearFocus(); keyboard?.hide(); searching = !searching; search = "" }, modifier = Modifier.size(48.dp), enabled = !saving) {
                     Icon(if (searching) LedgerIcons.Check else LedgerIcons.Search, if (searching) appString(R.string.ui_finish_category_search) else appString(R.string.ui_search_categories))
                 }
             }
-            if (status != null && large && status.length > 3) Text(status, Modifier.padding(vertical = 4.dp), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.tertiary)
+            if (status != null && large && status.length > 3) DuplicateBadge(status, Modifier.padding(vertical = 4.dp))
             EntryAmountField(value.amount, { onChange(value.copy(amount = it)) }, appString(R.string.ui_amount_cny), enabled = !saving,systemKeyboard=true)
             EntryNoteField(value.note, { onChange(value.copy(note = it)) }, !saving)
             if (searching) CompactEntryField(search, { search = it }, appString(R.string.ui_search_categories), enabled = !saving)

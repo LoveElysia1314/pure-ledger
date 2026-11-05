@@ -11,6 +11,7 @@
 
 - [开发环境](DEVELOPMENT.md)：构建、依赖和本地命令。
 - [架构](ARCHITECTURE.md)：解析、事务、存储、更新及界面状态。
+- [微信转账识别](WECHAT_RECOGNITION.md)：中英文字段、到账时间、识别入口和官方文档调研。
 - [验证](TESTING.md)：本地测试、专用模拟器和真机边界。
 - [当前状态](STATUS.md)：发布版本与验证范围。
 - [发布流程](RELEASING.md)：版本、CI、源码包及双平台发行。
